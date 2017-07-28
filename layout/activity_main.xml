@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center"
+    android:background="@drawable/file"
+    android:gravity="center"
+    tools:context="mindvalley.com.navigation.MainActivity">
+
+
+    <AutoCompleteTextView
+        android:id="@+id/source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:drawableRight="@drawable/ic_place_black_24dp"
+        android:hint="@string/source"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:imeOptions="actionNext"
+        android:textColorHint="#fff"
+        android:textSize="15sp" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/source"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:drawableRight="@drawable/ic_place_black_24dp"
+        android:hint="@string/destination"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="15sp" />
+
+
+    <AutoCompleteTextView
+        android:id="@+id/via"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/destination"
+        android:layout_marginLeft="5dp"
+        android:imeOptions="actionDone"
+
+        android:layout_marginRight="5dp"
+        android:drawableRight="@drawable/ic_directions_black_24dp"
+        android:hint="@string/via"
+        android:singleLine="true"
+        android:textColor="#fff"
+        android:textColorHint="#fff"
+        android:textSize="15sp" />
+
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="NEXT"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/navigation"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/custom_progress_dialog"
+        android:visibility="gone" />
+</RelativeLayout>
